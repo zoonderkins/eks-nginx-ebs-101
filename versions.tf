@@ -36,7 +36,9 @@ provider "kubernetes" {
       "--cluster-name",
       var.cluster_name,
       "--region",
-      var.region
+      var.region,
+      "--profile",
+      var.aws_profile
     ]
   }
 }
@@ -55,7 +57,9 @@ provider "helm" {
         "--cluster-name",
         var.cluster_name,
         "--region",
-        var.region
+        var.region,
+        "--profile",
+        var.aws_profile
       ]
     }
   }
